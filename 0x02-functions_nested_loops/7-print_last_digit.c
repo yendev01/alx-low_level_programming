@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
   * print_last_digit - entry point
@@ -12,7 +11,7 @@ int print_last_digit(int r)
 {
 	if (r >= 0)
 	{
-		printf("%d", r % 10);
+		_putchar((r % 10) + '0');
 		return (r % 10);
 	}
 	else
@@ -20,7 +19,7 @@ int print_last_digit(int r)
 		int i;
 
 		i = (-1 * r) % 10;
-		printf("%d", i);
+		_putchar(i + '0');
 		return (i);
 	}
 }
