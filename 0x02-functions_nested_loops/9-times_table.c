@@ -27,7 +27,7 @@ void times_table(void)
 			
 			else if (j == 9)
 			{
-				if (p < 9)
+				if (p < 10)
 				{
 					_putchar(' ');
 					_putchar(p + 48);
