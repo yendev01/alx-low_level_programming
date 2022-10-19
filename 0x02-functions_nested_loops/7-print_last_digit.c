@@ -11,7 +11,7 @@ int print_last_digit(int r)
 {
 	if (r >= 0)
 	{
-		_putchar((r % 10) + '0');
+		_putchar((r % 10) + 48);
 		return (r % 10);
 	}
 	else
@@ -19,7 +19,7 @@ int print_last_digit(int r)
 		int i;
 
 		i = (-1 * r) % 10;
-		_putchar(i + '0');
+		_putchar(i + 48);
 		return (i);
 	}
 }
