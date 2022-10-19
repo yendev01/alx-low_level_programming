@@ -13,8 +13,14 @@ void jack_bauer(void)
 	while (i < 3)
 	{
 		int n = 0;
+		int z = 10;
 
-		while (n < 4)
+		if (i == 2)
+		{
+			z = 5;
+		}
+
+		while (n < z)
 		{
 			int v = 0;
 
