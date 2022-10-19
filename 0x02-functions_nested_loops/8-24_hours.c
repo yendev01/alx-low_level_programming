@@ -17,7 +17,7 @@ void jack_bauer(void)
 
 		if (i == 2)
 		{
-			z = 5;
+			z = 4;
 		}
 
 		while (n < z)
