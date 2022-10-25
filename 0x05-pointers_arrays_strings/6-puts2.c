@@ -11,8 +11,14 @@
 void puts2(char *str)
 {
 	int n = 0;
+	int i = 0;
 
-	while (str[n] != '\0')
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+
+	while (n <= i)
 	{
 		printf("%c", str[n]);
 		n = n + 2;
