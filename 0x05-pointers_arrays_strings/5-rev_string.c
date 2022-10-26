@@ -33,6 +33,7 @@ void rev_string(char *str)
 		str++;
 		i--;
 	}
+	free(v);
 }
 
 /**
