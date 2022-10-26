@@ -30,7 +30,6 @@ void puts_half(char *str)
 	else
 	{
 		odd_n = (n - 1) / 2;
-		
 		odd_n++;
 
 		st = &str[odd_n];
