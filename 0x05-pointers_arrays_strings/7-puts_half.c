@@ -13,7 +13,7 @@ void puts_half(char *str)
 {
 	int n = strlen(str);
 	int odd_n;
-	int even_n; 
+	int even_n;
 	char *st;
 
 	if (n % 2 == 0)
@@ -30,6 +30,8 @@ void puts_half(char *str)
 	else
 	{
 		odd_n = (n - 1) / 2;
+		
+		odd_n++;
 
 		st = &str[odd_n];
 
