@@ -12,10 +12,9 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i = 0;
 
-	for (; i <= n; i++)
+	for (; i < n; i++)
 	{
-		*dest = src[i];
-		dest++;
+		dest[i] = src[i];
 	}
 
 	/*dest = &dest[0]; not neccessary but to revert point to 1st element*/
