@@ -1,6 +1,5 @@
 #include "main.h"
 #include <string.h>
-#include <stdio.h>
 /**
   * is_palindrome - check if a string is a palindrome
   * @s: string
@@ -16,29 +15,27 @@ int is_palindrome(char *s)
 		return (1);
 	}
 
-	return (check_palindrome(s, len - 1, len));
+	return (check_palindrome(s, s + len - 1));
 
 }
 
 /**
   * check_palindrome - checks for palindrome
   * @a: pointer to first position
-  * @b: position of the last char
-  * @m: length of string
+  * @b: pointer to the last char
   * Return: returns 1 or 0 depending on if it's palindrome or not
   */
 
-int check_palindrome(char *a, int b, int m)
+int check_palindrome(char *a, char *b)
 {
-	if (b <= m / 2)
+	if (*a == '\0')
 	{
-		return (0);
+		return (1);
+	}
+	if (*a == *b)
+	{
+		return (check_palindrome(a + 1, b - 1));
 	}
 
-	if (*a == *(a + b))
-	{
-		return (check_palindrome(a + 1, b - 1, m));
-	}
-
-	return (1);
+	return (0);
 }

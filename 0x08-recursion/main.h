@@ -20,4 +20,4 @@ int prime_checker(int a, int b);
 
 int sqrt_natural(int x, int y);
 
-int check_palindrome(char *a, int b, int c);
+int check_palindrome(char *a, char *b);
