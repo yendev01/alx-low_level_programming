@@ -8,7 +8,7 @@
 
 int _sqrt_recursion(int n)
 {
-	int m = n / 2;
+	int m = 1;
 
 	if (n == 1)
 	{
@@ -32,9 +32,9 @@ int _sqrt_recursion(int n)
 
 int sqrt_natural(int x, int y)
 {
-	if (y * y > x)
+	if (y * y < x)
 	{
-		return (sqrt_natural(x, y - 1));
+		return (sqrt_natural(x, y + 1));
 	}
 
 	else if (y * y == x)
