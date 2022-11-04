@@ -9,7 +9,7 @@
   * Return: 0 or 1
   */
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int sum = 0, i;
 
@@ -26,7 +26,6 @@ int main(int argc, char* argv[])
 			printf("Error\n");
 			return (1);
 		}
-		
 		sum = sum + atoi(argv[i]);
 	}
 	printf("%d\n", sum);
