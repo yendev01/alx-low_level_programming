@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-
+#include <string.h>
 /**
   * main - program that adds positive numbers
   * @argc: count
@@ -21,11 +21,18 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		if (isdigit(argv[i][0]) == 0)
+		unsigned int n = 0;
+
+		while (n < strlen(argv[i]))
 		{
-			printf("Error\n");
-			return (1);
+			if (isdigit(argv[i][n]) == 0)
+			{
+				printf("Error\n");
+				return (1);
+			}
+			n++;
 		}
+
 		sum = sum + atoi(argv[i]);
 	}
 	printf("%d\n", sum);
