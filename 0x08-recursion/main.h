@@ -17,3 +17,5 @@ int is_prime_number(int n);
 int is_palindrome(char *s);
 
 int prime_checker(int a, int b);
+
+int sqrt_natural(int x, int y);
