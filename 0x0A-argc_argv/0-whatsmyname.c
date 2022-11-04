@@ -4,7 +4,7 @@
   * main - entry point
   * @argc: count
   * @argv: argument vector(1-D array)
-  * Return: returns 0 
+  * Return: returns 0
   */
 
 int main(int argc, char *argv[])
