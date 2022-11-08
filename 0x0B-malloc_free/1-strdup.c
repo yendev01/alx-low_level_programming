@@ -17,17 +17,19 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-
-	length = strlen(str);
-
-	ptr = (char *)malloc((length + 1) * sizeof(char));
-
-	for (i = 0; i < length; i++)
+	else
 	{
-		*(ptr + i) = *str;
-		str++;
-	}
-	*(ptr + i) = '\0';
+		length = strlen(str);
 
-	return (ptr);
+		ptr = (char *)malloc((length + 1) * sizeof(char));
+
+		for (i = 0; i < length; i++)
+		{
+			*(ptr + i) = *str;
+			str++;
+		}
+		*(ptr + i) = '\0';
+
+		return (ptr);
+	}
 }
