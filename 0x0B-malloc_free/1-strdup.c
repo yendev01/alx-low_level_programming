@@ -23,6 +23,11 @@ char *_strdup(char *str)
 
 		ptr = (char *)malloc((length + 1) * sizeof(char));
 
+		if (ptr == NULL)
+		{
+			return (NULL);
+		}
+
 		for (i = 0; i < length; i++)
 		{
 			*(ptr + i) = *str;
