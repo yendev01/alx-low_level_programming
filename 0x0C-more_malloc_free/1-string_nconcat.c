@@ -16,7 +16,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int i, m, n_int = n;
 	char *array;
 
-	printf("%d\n", n_int);
 	if (s1 == NULL)
 	{
 		strcpy(s1, "");
