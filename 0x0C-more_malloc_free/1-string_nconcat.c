@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <string.h>
-#include <limits.h>
+#include "main.h"
+#include <stdio.h>
+int int_strlen(char *str);
 /**
   * string_nconcat - funtion that concatenates two strings
   * @s1: string to be concatenated
@@ -11,9 +13,10 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, m;
+	int i, m, n_int = n;
 	char *array;
 
+	printf("%d\n", n_int);
 	if (s1 == NULL)
 	{
 		strcpy(s1, "");
@@ -22,21 +25,21 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		strcpy(s2, "");
 	}
-	if ((int)n < 0)
+	if (n_int < 0)
 	{
 		return (NULL);
 	}
-	if (n >= strlen(s2))
+	if (n_int >= int_strlen(s2))
 	{
-		n = strlen(s2);
+		n_int = int_strlen(s2);
 	}
-	i = sizeof(char) * (strlen(s1) + n + 1);
+	i = sizeof(char) * (int_strlen(s1) + n_int + 1);
 	array = malloc(i);
 	if (array == NULL)
 	{
 		return (NULL);
 	}
-	for (m = 0; m < strlen(s1); m++)
+	for (m = 0; m < int_strlen(s1); m++)
 	{
 		array[m] = *(s1 + m);
 	}
@@ -48,4 +51,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	array[m] = '\0';
 	return (array);
+}
+
+/**
+  * int_strlen - counts a string
+  * @str: input string
+  * Return: returns number of string
+  */
+
+int int_strlen(char *str)
+{
+	int m = strlen(str);
+
+	return (m);
 }
