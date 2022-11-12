@@ -21,21 +21,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		strcpy(s2, "");
 	}
-
 	if (n >= strlen(s2))
 	{
 		n = strlen(s2);
 	}
-
+	if ((int)n < 0)
+	{
+		return (NULL);
+	}
 	i = sizeof(char) * (strlen(s1) + n + 1);
-
 	array = malloc(i);
-
 	if (array == NULL)
 	{
 		return (NULL);
 	}
-
 	for (m = 0; m < strlen(s1); m++)
 	{
 		array[m] = *(s1 + m);
