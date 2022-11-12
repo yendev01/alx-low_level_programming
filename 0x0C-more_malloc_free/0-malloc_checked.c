@@ -9,13 +9,13 @@
 void *malloc_checked(unsigned int b)
 {
 	void *reserve;
-	
+
 	if (b == 0)
 	{
 		exit(98);
 	}
 	reserve = malloc(b);
-	
+
 	if (reserve == NULL)
 	{
 		exit(98);
