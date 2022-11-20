@@ -12,9 +12,9 @@
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i = 0;
-	char * chr;
+	char *chr;
 	va_list ap;
-	
+
 	va_start(ap, n);
 
 	for (; i < n; i++)
