@@ -2,7 +2,7 @@
 
 /**
   * sum_them_all - ...
-  * @n: input
+  * @m: input
   * Return: returns int
   */
 
