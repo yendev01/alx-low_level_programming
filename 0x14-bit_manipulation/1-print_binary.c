@@ -9,7 +9,7 @@ void print_binary(unsigned long int n)
 {
 	int i;
 	unsigned long int product = 1;
-	
+
 	for (i = 0; i < (int)n; i++)
 	{
 		product = product * 2;
