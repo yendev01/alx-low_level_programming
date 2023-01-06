@@ -10,10 +10,12 @@ unsigned int _pow(unsigned int x, unsigned int y);
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int n, sum = 0, i = strlen(b);
+	unsigned int n, sum = 0, i;
 
 	if (!b)
 		return (0);
+
+	i = strlen(b);
 
 	for (n = 1; n <= i; n++)
 	{
