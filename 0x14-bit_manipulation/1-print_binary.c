@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include "main.h"
+
 /**
   * print_binary - ...
   * @n: number
@@ -20,8 +21,15 @@ void print_binary(unsigned long int n)
 	}
 
 	for (; i >= 0; i--)
-	{
-		printf("%c", n & (1 << i) ? '1' : '0');
-	}
 
+	{
+		if (n & (1 << i))
+		{
+			_putchar('1');
+		}
+		else
+		{
+			_putchar('0');
+		}
+	}
 }
