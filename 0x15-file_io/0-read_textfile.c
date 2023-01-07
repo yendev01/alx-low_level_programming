@@ -10,13 +10,13 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	int wd, rd;
+	ssize_t wd, rd;
 	char *buf;
 
 	if (!*filename)
 		return (0);
 
-	fd = open("Requiescat", O_RDONLY);
+	fd = open(filename, O_RDONLY);
 
 	if (fd < 0)
 		return (0);
@@ -33,7 +33,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	buf[rd] = '\0';
-	close(fd);
 	wd = write(STDOUT_FILENO, buf, rd);
 
 	if (wd < 0)
@@ -42,5 +41,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	free(buf);
+	close(fd);
 	return (wd);
 }
