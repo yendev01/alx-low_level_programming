@@ -18,7 +18,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	fd = open("Requiescat", O_RDONLY);
 
-	if (fd == -1)
+	if (fd < 0)
 		return (0);
 
 	buf = malloc((size_t)sizeof(char) * letters);
@@ -27,7 +27,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	rd = read(fd, buf, letters);
 
-	if (rd == -1)
+	if (rd < 0)
 	{
 		free(buf);
 		return (0);
@@ -35,7 +35,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buf[rd] = '\0';
 	wd = write(STDOUT_FILENO, buf, rd);
 
-	if (wd == -1)
+	if (wd < 0)
 	{
 		free(buf);
 		return (0);
